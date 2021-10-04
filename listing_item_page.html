@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<!--This page is the event page of the website-->
+<head>
+    <title>Great Falls Networking Event page</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1"
+          name="viewport"/>
+    <meta content="The home page for GreatFalls Networking " name="description">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/app_header_without_login.css" rel="stylesheet">
+    <link href="css/listing_time_page.css" rel="stylesheet">
+    <link href="css/app-footer.css" rel="stylesheet">
+
+</head>
+
+<body>
+<main>
+    <header>
+        <div id="subHeader">
+            <div id="leftHeader">
+                <div id="logo">
+                    <a href="home_without_login.html">
+                        <img alt="GreatFalls Logo" height="150"
+                             src="img/site/logo.png" width="300"/>
+                    </a>
+                </div>
+            </div>
+            <div id="midHeader">
+                <a href="home_without_login.html">
+                    GreatFalls Networking
+                </a>
+                <form action="listing_item_page.html" class="searchForm">
+                    <input id="searchBar" placeholder=" Any topic interested?"
+                           type="text">
+                    <input alt="Search Icon" height="35"
+                           id="searchIcon" src="img/site/search-icon.png"
+                           type="image"
+                           width="35"/>
+                </form>
+            </div>
+            <div id="rightHeader">
+                <form id="login-box">
+                    <input name="username" placeholder="Username" type="text">
+                    <input name="pw" placeholder="Password" type="password">
+                    <input name="submit" type="submit" value="Log in"> or <a
+                        href="#">Register</a>
+                </form>
+            </div>
+        </div>
+        <ul id="menu">
+            <li><a class="selected" href="listing_item_page.html">Events</a>
+            </li>
+            <li><a href="add_post_page.html">Feed</a></li>
+            <li><a href="#groups">Groups</a></li>
+            <li><a href="#covid19">Covid-19</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </header>
+    <section>
+<!-- main content of event page-->
+        <ul id="side-tabs">
+            <li><a class="selected" href="#"> This Month</a></li>
+            <li><a href="#"> Next Month</a></li>
+            <li><a href="#"> Next 3 Months</a></li>
+            <li><a href="#"> Next 6 Months</a></li>
+        </ul>
+        <article>
+            <!--event block area. There are three event blocks in the page-->
+            <ul id="eventBoxes">
+                <li class="eventBlock">
+                    <div class="eventImage">
+                        <a href="item_details_page.html">
+                            <img alt="bird watchers"
+                                 src="img/events/bird-watchers.jpg">
+                        </a>
+                    </div>
+                    <ul class="eventInfo">
+                        <li class="eventTitle">Bird Watchers</li>
+                        <li class="eventLocation">Location: Trail A</li>
+                        <li class="eventTime">09/01/2021 10:00 AM</li>
+                        <li class="attendees">3 attendees</li>
+                    </ul>
+                    <div class="eventButton">
+                        <a href="item_details_page.html">
+                            <img alt="add icon"
+                                 src="img/events/add-event-button.png">
+                        </a>
+                        <a href="#">
+                            <img alt="share-con"
+                                 src="img/site/share-icon.png">
+                        </a>
+                    </div>
+                </li>
+
+                <li class="eventBlock">
+                    <div class="eventImage">
+                        <a href="#">
+                            <img alt="music in the woods"
+                                 src="img/events/music-in-the-woods.jpg">
+                        </a>
+                    </div>
+                    <ul class="eventInfo">
+                        <li class="eventTitle">Music in the Woods</li>
+                        <li class="eventLocation">Location: Trail B</li>
+                        <li class="eventTime">09/11/2021 10:00 AM</li>
+                        <li class="attendees">13 attendees</li>
+                    </ul>
+                    <div class="eventButton">
+                        <a href="#">
+                            <img alt="add icon"
+                                 src="img/events/add-event-button.png">
+                        </a>
+                        <a href="#">
+                            <img alt="share-con"
+                                 src="img/site/share-icon.png">
+                        </a>
+                    </div>
+                </li>
+
+                <li class="eventBlock">
+                    <div class="eventImage">
+                        <a href="#">
+                            <img alt="deer patrol"
+                                 src="img/events/deer-patrol.jpeg">
+                        </a>
+                    </div>
+                    <ul class="eventInfo">
+                        <li class="eventTitle">Deer-patrol</li>
+                        <li class="eventLocation">Location: Trail C</li>
+                        <li class="eventTime">09/21/2021 10:00 AM</li>
+                        <li class="attendees">23 attendees</li>
+                    </ul>
+                    <div class="eventButton">
+                        <a href="#">
+                            <img alt="add icon"
+                                 src="img/events/add-event-button.png">
+                        </a>
+                        <a href="#">
+                            <img alt="share-con"
+                                 src="img/site/share-icon.png">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <footer>
+        <div id="leftFooter">
+            <p><b> Stay Connected </b></p>
+            Keep up on newest special offers and events
+            <div class="horizontal">
+                <a href="#"><img alt="social media"
+                                 height="30"
+                                 src="img/site/social-media-icon.png"
+                                 width="150"></a>
+            </div>
+        </div>
+        <div id="midFooter">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Directions</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div id="rightFooter">
+            <div class="flexItem">
+                &copy; 2021 Great Falls Networking
+            </div>
+        </div>
+    </footer>
+</main>
+</body>
+
+</html>

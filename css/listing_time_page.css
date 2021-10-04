@@ -1,0 +1,97 @@
+/*this stylesheet is for the main content in listing_item_page*/
+ul {
+    list-style-type: none;
+}
+
+ul#side-tabs {
+    float: left;
+    width: 200px;
+    padding-left: 0;
+    margin-left: 2%;
+    background-color: cornflowerblue;
+    border-right-style: groove;
+    border-color: whitesmoke;
+    border-width: 2px;
+    height: 600px;
+}
+
+ul#side-tabs li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: cornflowerblue;
+    color: white;
+    text-align: right;
+    text-decoration: none;
+}
+
+ul#side-tabs li a:hover {
+    background-color: dodgerblue;
+}
+
+ul#side-tabs li a.selected {
+    background-color: steelblue;
+}
+
+#eventBoxes {
+    margin-left: 15%;
+}
+
+.eventBlock {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2%;
+}
+
+.eventImage {
+    grid-area: event-image;
+}
+
+.eventImage a img {
+    width: 200px;
+    height: 200px;
+}
+
+.eventInfo {
+    grid-area: event-info;
+}
+
+.eventTitle {
+    font-weight: bold;
+}
+
+.eventButton {
+    grid-area: add-event-button;
+    padding: 0.5em;
+    font-size: 14px;
+    place-self: end start;
+    grid-column: 2;
+    grid-row: 3;
+    border-radius: 12px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.eventButton a img {
+    width: 30px;
+    height: 30px;
+
+}
+
+@media all and (min-width: 768px) {
+    .eventButton {
+        margin-left: 0.5em;
+        grid-area: add-event-button;
+        padding: 0.5em;
+        font-size: 14px;
+        place-self: end start;
+        grid-column: 2;
+        grid-row: 3;
+        border-radius: 12px;
+    }
+
+    .eventButton a img {
+        width: 50px;
+        height: 50px;
+
+    }
+}
