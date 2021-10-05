@@ -143,3 +143,4 @@ function checkQueryString() {
     $(searchResult).appendTo($("div#search-result"));
 
 }
+
