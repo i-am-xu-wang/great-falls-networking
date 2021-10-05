@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Great Falls Networking Search Result</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1"
+          name="viewport"/>
+    <meta content="The search result page" name="description">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/app_header_with_login.css" rel="stylesheet">
+    <link href="css/search_result.css" rel="stylesheet">
+    <link href="css/listing_time_page.css" rel="stylesheet">
+    <link href="css/app-footer.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div id="subHeader">
+        <div id="leftHeader">
+            <div id="logo">
+                <a href="home_with_login.html">
+                    <img alt="GreatFalls Logo" src="img/site/logo.png"/>
+                </a>
+            </div>
+        </div>
+        <div id="midHeader">
+            <a href="home_with_login.html">
+                GreatFalls Networking
+            </a>
+                <form action="search_result.html" method="get" class="searchForm">
+                    <input id="searchBar" name="search-topics" placeholder=" Any topic interested?"
+                           type="text">
+
+                    <input alt="Search Icon" height="35"
+                           id="searchIcon" name="submit" src="img/site/search-icon.png"
+                           type="image"
+                           width="35"/>
+                </form>
+        </div>
+        <div id="rightHeader">
+            <div id="account">
+                <a href="#account"><img alt="account Icon"
+                                        src="img/site/account-icon.png"/></a>
+            </div>
+            <div id="subRightHeader">
+                <div id="message">
+                    <a href="#message"><img alt="message Icon"
+                                            src="img/site/message-icon.png"/></a>
+                </div>
+                <div id="notification">
+                    <a href="#notification"><img
+                            alt="notification Icon"
+                            src="img/site/notification-icon.png"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="menu">
+        <li><a href="listing_item_page.html">Events</a></li>
+        <li><a href="add_post_page.html">Feed</a></li>
+        <li><a href="#groups">Groups</a></li>
+        <li><a href="#covid19">Covid-19</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</header>
+<main>
+
+</main>
+<h2 id="search-page-title">Search Results for:</h2>
+<div id="search-result"></div>
+<footer>
+    <div id="leftFooter">
+        <p><b> Stay Connected </b></p>
+        Keep up on newest special offers and events
+        <div class="horizontal">
+            <a href="#"><img alt="social media"
+                             height="30" src="img/site/social-media-icon.png" width="150"></a>
+        </div>
+    </div>
+    <div id="midFooter">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Directions</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </div>
+    <div id="rightFooter">
+        <div class="flexItem">
+            &copy; 2021 Great Falls Networking
+        </div>
+    </div>
+</footer>
+</body>
+</html>

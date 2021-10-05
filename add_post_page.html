@@ -3,6 +3,8 @@
 <!--this is the feed page in the website-->
 <head>
     <title>Great Falls Networking add post page</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1"
           name="viewport"/>
@@ -30,11 +32,12 @@
                 <a href="home_with_login.html">
                     GreatFalls Networking
                 </a>
-                <form action="listing_item_page.html" class="searchForm">
-                    <input id="searchBar" placeholder=" Any topic interested?"
+                <form action="search_result.html" method="get" class="searchForm">
+                    <input id="searchBar" name="search-topics" placeholder=" Any topic interested?"
                            type="text">
+
                     <input alt="Search Icon" height="35"
-                           id="searchIcon" src="img/site/search-icon.png"
+                           id="searchIcon" name="submit" src="img/site/search-icon.png"
                            type="image"
                            width="35"/>
                 </form>
@@ -66,7 +69,7 @@
         </ul>
     </header>
     <section>
-<!--        main content area, it contains two sections: post area and text editor-->
+        <!--        main content area, it contains two sections: post area and text editor-->
         <section id="postsArea">
             <div class="postBlock">
                 <div class="userImage">
