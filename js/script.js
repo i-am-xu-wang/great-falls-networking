@@ -1,7 +1,7 @@
 $(document).ready(function () {
     //event handle for like button
-    $('div.eventButton a.likeButton img').click(function () {
-        var likeDiv = $(this).siblings('div.likeNumber');
+    $('div.eventButton img.likeButton').click(function () {
+        var likeDiv = $(this).parent().siblings('ul.eventInfo').children('li.attendees').children('div.likeLine').children('div.likeNumber');
         var likeNumber = parseInt($(likeDiv).text());
         likeNumber++;
         console.log(likeNumber);

@@ -42,3 +42,14 @@ button {
     font-size: 20px;
     color: cornflowerblue;
 }
+.likeLine{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 13%;
+    color: lightseagreen;
+}
+.likeNumber{
+    margin-right: 3px;
+}
+
