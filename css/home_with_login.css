@@ -55,6 +55,9 @@ h1 {
     color: lightseagreen;
     flex-direction: row;
 }
+.shareNumber,.likeNumber{
+    margin-left: 20px;
+}
 
 
 .eventButton {
@@ -164,7 +167,7 @@ h4 {
         display: flex;
         flex-direction: row;
         width: 300px;
-        justify-content: space-around;
+        justify-content: flex-start;
         font-size: 20px;
         color: lightseagreen;
     }

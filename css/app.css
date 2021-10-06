@@ -42,12 +42,4 @@ button.registerButton {
     font-size: 20px;
     color: cornflowerblue;
 }
-.likeLine .shareLine{
-    display: flex;
-    width:150px;
-    color: lightseagreen;
-}
-.likeNumber .shareNumber{
-    margin-right: 3px;
-}
 

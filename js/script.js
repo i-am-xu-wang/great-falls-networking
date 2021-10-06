@@ -1,27 +1,30 @@
 $(document).ready(function () {
-    //event handle for like button
-    $('div.eventButton img.likeButton').click(function () {
-        var likeDiv = $(this).parent().siblings('ul.eventInfo').children('li.attendees').children('div.likeLine').children('div.likeNumber');
-        var likeNumber = parseInt($(likeDiv).text());
-        likeNumber++;
-        console.log(likeNumber);
-        $(likeDiv).text(likeNumber);
-        var successMsg = $('<p class = "like-success">Like successful</p>');
+    //event delegation implementation for share/like button
+    $('.eventButton').on('click','img',function () {
+        event.preventDefault();
+        var target = event.target;
+        var eventElement;
+        switch (target.className){
+            case 'shareButton':
+                eventElement = $(this).parent().siblings('ul.eventInfo').children('li.attendees').children('span.shareNumber');
+                break;
+            case 'likeButton':
+                eventElement = $(this).parent().siblings('ul.eventInfo').children('li.attendees').children('span.likeNumber');
+                break;
+        }
+        var eventNumber = parseInt($(eventElement).text());
+        eventNumber++;
+        console.log(eventNumber);
+        $(eventElement).text(eventNumber);
+        var successMsg = $('<p class = "click-success">Click successful</p>');
         // $(this).parent().append(successMsg);
         $(successMsg).appendTo($(this).parent()).fadeOut('slow', function () {
             $(this).remove();
         })
+
     });
 
     checkQueryString();
-    //event handle for register button
-    $('button.registerButton').click
-
-
-
-
-
-
 
 
 
