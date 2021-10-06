@@ -55,10 +55,6 @@ h1 {
     color: lightseagreen;
     flex-direction: row;
 }
-.shareNumber,.likeNumber{
-    margin-left: 20px;
-}
-
 
 .eventButton {
     display: flex;
