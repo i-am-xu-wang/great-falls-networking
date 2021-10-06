@@ -54,7 +54,6 @@ h1 {
     font-size: 20px;
     color: lightseagreen;
     flex-direction: row;
-    justify-content: space-between;
 }
 
 
@@ -163,10 +162,11 @@ h4 {
     .attendees {
         margin-top: 20px;
         display: flex;
+        flex-direction: row;
+        width: 300px;
+        justify-content: space-around;
         font-size: 20px;
         color: lightseagreen;
-        flex-direction: row;
-        justify-content: space-between;
     }
 
     .eventButton {

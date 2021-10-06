@@ -12,7 +12,19 @@ $(document).ready(function () {
             $(this).remove();
         })
     });
+
     checkQueryString();
+    //event handle for register button
+    $('button.registerButton').click
+
+
+
+
+
+
+
+
+
 });
 
 function checkQueryString() {
