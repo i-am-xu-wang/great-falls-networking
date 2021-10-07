@@ -191,6 +191,7 @@ function checkQueryString() {
             "                </div>\n" +
             "            </div>")
     } else {
+        //when input not designated phase, displaying the erro message.
         searchResult = $("<h3>There is no available result.</h3>")
     }
 
