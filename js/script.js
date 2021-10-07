@@ -25,8 +25,8 @@ $(document).ready(function () {
     });
     //the second user interaction use mouseover/mouseout events.
     // add new element of user information in the add_post_page.html
-     var userInfo;
-   $('.userImage img').mouseover(function(){
+    var userInfo;
+    $('.userImage img').mouseover(function () {
         event.preventDefault();
         var target = event.target;
         var eventElement;
@@ -37,8 +37,7 @@ $(document).ready(function () {
                 '                    <li>Interested Group: Bird Watchers</li>\n' +
                 '                    <li>Self-Intro: I am Hearts Queen. Nice to meet you</li>\n' +
                 '                </ul>')
-        }
-        else{
+        } else {
             userInfo = $("<ul class = \"popInfo\">\n" +
                 "                    <li>This user choose not to declare their information</li>\n" +
                 "                </ul>")
@@ -46,14 +45,32 @@ $(document).ready(function () {
         userInfoElement = $(this).parent().siblings('div.userInfo');
         $(userInfo).appendTo(userInfoElement).show();
     });
-    $('.userImage img').mouseout(function(){
+    $('.userImage img').mouseout(function () {
         $(userInfo).hide();
     });
+
+
+    // register and unregister button, the number of attendee will add/minus respectively
+       $('button').click(function () {
+           attendeeElement = $(this).siblings('ul.eventInfo').children('li.attendees').children('span.attendeesNumber');
+           var attendeeNumber = parseInt($(attendeeElement).text());
+         console.log($(this).text());
+        if ($(this).text() == "Register") {
+            $(this).text("Unregister");
+            attendeeNumber++;
+        } else {
+           $(this).text("Register");
+           attendeeNumber--;
+        }
+        $(attendeeElement).text(attendeeNumber);
+    });
+
 
     checkQueryString();
 
 
 });
+
 //search bar implementation per Project 3 requirement
 function checkQueryString() {
     var queryString = window.location.search;
