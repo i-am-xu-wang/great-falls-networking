@@ -1,10 +1,10 @@
 $(document).ready(function () {
     //event delegation implementation for share/like button
-    $('.eventButton').on('click','img',function () {
+    $('.eventButton').on('click', 'img', function () {
         event.preventDefault();
         var target = event.target;
         var eventElement;
-        switch (target.className){
+        switch (target.className) {
             case 'shareButton':
                 eventElement = $(this).parent().siblings('ul.eventInfo').children('li.attendees').children('span.shareNumber');
                 break;
@@ -23,13 +23,38 @@ $(document).ready(function () {
         })
 
     });
+    //the second user interaction use mouseover/mouseout events.
+    // add new element of user information in the add_post_page.html
+     var userInfo;
+   $('.userImage img').mouseover(function(){
+        event.preventDefault();
+        var target = event.target;
+        var eventElement;
+        if (target.className == "heartsQueen") {
+            userInfo = $('<ul class = "popInfo">\n' +
+                '                    <li>Age: 27</li>\n' +
+                '                    <li>Gender: Female</li>\n' +
+                '                    <li>Interested Group: Bird Watchers</li>\n' +
+                '                    <li>Self-Intro: I am Hearts Queen. Nice to meet you</li>\n' +
+                '                </ul>')
+        }
+        else{
+            userInfo = $("<ul class = \"popInfo\">\n" +
+                "                    <li>This user choose not to declare their information</li>\n" +
+                "                </ul>")
+        }
+        userInfoElement = $(this).parent().siblings('div.userInfo');
+        $(userInfo).appendTo(userInfoElement).show();
+    });
+    $('.userImage img').mouseout(function(){
+        $(userInfo).hide();
+    });
 
     checkQueryString();
 
 
-
 });
-
+//search bar implementation per Project 3 requirement
 function checkQueryString() {
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
@@ -114,8 +139,7 @@ function checkQueryString() {
             "                </div>\n" +
             "            </li>\n" +
             "        </ul>")
-    }
-    else if (keyword === "bird" || keyword === "bird watcher"){
+    } else if (keyword === "bird" || keyword === "bird watcher") {
         searchResult = $("<div id=\"homeBoxes\">\n" +
             "                <div id=\"homePageImage\">\n" +
             "                    <a href=\"#\">\n" +
@@ -149,9 +173,7 @@ function checkQueryString() {
             "                    </div>\n" +
             "                </div>\n" +
             "            </div>")
-    }
-
-    else {
+    } else {
         searchResult = $("<h3>There is no available result.</h3>")
     }
 

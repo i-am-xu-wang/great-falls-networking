@@ -77,7 +77,18 @@ button {
     margin-top: 35%;
     height: 30px;
 }
-
+.userInfo{
+    margin-left: 10px;
+}
+.popInfo{
+    border-color:black;
+    font-size: small;
+    color: black;
+    background-color: lightgrey;
+}
+.popInfo li{
+    margin-right: 10px;
+}
 @media all and (min-width: 768px) {
 
     button {
