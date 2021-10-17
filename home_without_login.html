@@ -3,6 +3,8 @@
 <!--this is the home page without users log in-->
 <head>
     <title>Great Falls Networking home without login page</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
     <meta content="width=device-width, initial-scale=1, minimum-scale=1"
           name="viewport"/>
     <meta charset="utf-8">
@@ -30,11 +32,12 @@
                 <a href="home_without_login.html">
                     GreatFalls Networking
                 </a>
-                <form action="listing_item_page.html" class="searchForm">
-                    <input id="searchBar" placeholder=" Any topic interested?"
+                <form action="search_result.html" method="get" class="searchForm">
+                    <input id="searchBar" name="search-topics" placeholder=" Any topic interested?"
                            type="text">
+
                     <input alt="Search Icon" height="35"
-                           id="searchIcon" src="img/site/search-icon.png"
+                           id="searchIcon" name="submit" src="img/site/search-icon.png"
                            type="image"
                            width="35"/>
                 </form>
@@ -49,57 +52,52 @@
             </div>
         </div>
         <ul id="menu">
-            <li><a class="selected" href="#events">Events</a></li>
-            <li><a href="#feed">Feed</a></li>
+            <li><a href="listing_item_page.html">Events</a></li>
+            <li><a href="add_post_page.html">Feed</a></li>
             <li><a href="#groups">Groups</a></li>
             <li><a href="#covid19">Covid-19</a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
     </header>
-    <section>
-<!-- the main content of this page. It contains a side tab and a event block-->
+    <main>
+        <!-- the main content of this page. It contains a side tab and a event block-->
         <h1> Current Ongoing</h1>
         <ul id="feature-tab">
             <li><a class="selected" href="#events"> ★ Featured Event</a></li>
             <li><a href="#feed"> ★ Featured Feed</a></li>
             <li><a href="#groups"> ★ Featured Group</a></li>
         </ul>
-        <article>
-            <div id="homeBoxes">
-                <div id="homePageImage">
-                    <a href="#">
-                        <img alt="bird watchers"
-                             src="img/events/bird-watchers.jpg">
-                    </a>
-                </div>
-                <div id="eventInfoAndButton">
-                    <ul class="eventInfo">
-                        <li class="eventTitle">Bird Watchers</li>
-                        <li class="eventLocation">Location: Trail A</li>
-                        <li class="eventTime">09/01/2021 10:00 AM</li>
-                        <li class="attendees">3 attendees
-                            <div>22 likes</div>
-                        <li>
-                    </ul>
-                    <button>Click to Register</button>
-                    <div class="eventButton">
-                        <a href="#">
-                            <img alt="add icon"
-                                 src="img/events/add-event-button.png">
-                        </a>
-                        <a href="#">
-                            <img alt="share-icon"
-                                 src="img/site/share-icon.png">
-                        </a>
-                        <a href="#">
-                            <img alt="like-icon"
-                                 src="img/site/like-icon.png">
-                        </a>
-                    </div>
-                </div>
+        <div id="homeBoxes">
+            <div id="homePageImage">
+                <a href="item_details_page.html">
+                    <img alt="bird watchers"
+                         src="img/events/bird-watchers.jpg">
+                </a>
             </div>
-        </article>
-    </section>
+            <div id="eventInfoAndButton">
+                <ul class="eventInfo">
+                    <li class="eventTitle">Bird Watchers</li>
+                    <li class="eventLocation">Location: Trail A</li>
+                    <li class="eventTime">09/01/2021 10:00 AM</li>
+                        <li class="attendees">
+                            <span class="attendeesNumber">3</span>
+                            &nbsp;attendees
+                            <span class="likeNumber">22</span>
+                            &nbsp;likes
+                            <span class="shareNumber">0</span>
+                            &nbsp;shares
+                        <li>
+                </ul>
+               <button>Register</button>
+                    <div class="eventButton">
+                        <img class="shareButton" alt="share-icon"
+                             src="img/site/share-icon.png">
+                        <img class="likeButton" alt="like-icon"
+                             src="img/site/like-icon.png">
+                    </div>
+            </div>
+        </div>
+    </main>
 
 
     <footer>

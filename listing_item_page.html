@@ -3,6 +3,8 @@
 <!--This page is the event page of the website-->
 <head>
     <title>Great Falls Networking Event page</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1"
           name="viewport"/>
@@ -20,21 +22,22 @@
         <div id="subHeader">
             <div id="leftHeader">
                 <div id="logo">
-                    <a href="home_without_login.html">
+                    <a href="index.html">
                         <img alt="GreatFalls Logo" height="150"
                              src="img/site/logo.png" width="300"/>
                     </a>
                 </div>
             </div>
             <div id="midHeader">
-                <a href="home_without_login.html">
+                <a href="index.html">
                     GreatFalls Networking
                 </a>
-                <form action="listing_item_page.html" class="searchForm">
-                    <input id="searchBar" placeholder=" Any topic interested?"
+                <form action="search_result.html" method="get" class="searchForm">
+                    <input id="searchBar" name="search-topics" placeholder=" Any topic interested?"
                            type="text">
+
                     <input alt="Search Icon" height="35"
-                           id="searchIcon" src="img/site/search-icon.png"
+                           id="searchIcon" name="submit" src="img/site/search-icon.png"
                            type="image"
                            width="35"/>
                 </form>
@@ -57,94 +60,92 @@
             <li><a href="#contact">Contact Us</a></li>
         </ul>
     </header>
-    <section>
-<!-- main content of event page-->
+    <main>
+        <!-- main content of event page-->
         <ul id="side-tabs">
             <li><a class="selected" href="#"> This Month</a></li>
             <li><a href="#"> Next Month</a></li>
             <li><a href="#"> Next 3 Months</a></li>
             <li><a href="#"> Next 6 Months</a></li>
         </ul>
-        <article>
-            <!--event block area. There are three event blocks in the page-->
-            <ul id="eventBoxes">
-                <li class="eventBlock">
-                    <div class="eventImage">
-                        <a href="item_details_page.html">
-                            <img alt="bird watchers"
-                                 src="img/events/bird-watchers.jpg">
-                        </a>
-                    </div>
-                    <ul class="eventInfo">
-                        <li class="eventTitle">Bird Watchers</li>
-                        <li class="eventLocation">Location: Trail A</li>
-                        <li class="eventTime">09/01/2021 10:00 AM</li>
-                        <li class="attendees">3 attendees</li>
-                    </ul>
-                    <div class="eventButton">
-                        <a href="item_details_page.html">
-                            <img alt="add icon"
-                                 src="img/events/add-event-button.png">
-                        </a>
-                        <a href="#">
-                            <img alt="share-con"
-                                 src="img/site/share-icon.png">
-                        </a>
-                    </div>
-                </li>
+        <!--event block area. There are three event blocks in the page-->
+        <ul id="eventBoxes">
+            <li class="eventBlock">
+                <div class="eventImage">
+                    <a href="item_details_page.html">
+                        <img alt="bird watchers"
+                             src="img/events/bird-watchers.jpg">
+                    </a>
+                </div>
+                <ul class="eventInfo">
+                    <li class="eventTitle">Bird Watchers</li>
+                    <li class="eventLocation">Location: Trail A</li>
+                    <li class="eventTime">09/01/2021 10:00 AM</li>
+                    <li class="attendees">3 attendees</li>
+                </ul>
+                <div class="eventButton">
+                    <a href="#">
+                        <img alt="like icon"
+                             src="img/site/like-icon.png">
+                    </a>
+                    <a href="#">
+                        <img alt="share-con"
+                             src="img/site/share-icon.png">
+                    </a>
+                </div>
+            </li>
 
-                <li class="eventBlock">
-                    <div class="eventImage">
-                        <a href="#">
-                            <img alt="music in the woods"
-                                 src="img/events/music-in-the-woods.jpg">
-                        </a>
-                    </div>
-                    <ul class="eventInfo">
-                        <li class="eventTitle">Music in the Woods</li>
-                        <li class="eventLocation">Location: Trail B</li>
-                        <li class="eventTime">09/11/2021 10:00 AM</li>
-                        <li class="attendees">13 attendees</li>
-                    </ul>
-                    <div class="eventButton">
-                        <a href="#">
-                            <img alt="add icon"
-                                 src="img/events/add-event-button.png">
-                        </a>
-                        <a href="#">
-                            <img alt="share-con"
-                                 src="img/site/share-icon.png">
-                        </a>
-                    </div>
-                </li>
+            <li class="eventBlock">
+                <div class="eventImage">
+                    <a href="#">
+                        <img alt="music in the woods"
+                             src="img/events/music-in-the-woods.jpg">
+                    </a>
+                </div>
+                <ul class="eventInfo">
+                    <li class="eventTitle">Music in the Woods</li>
+                    <li class="eventLocation">Location: Trail B</li>
+                    <li class="eventTime">09/11/2021 10:00 AM</li>
+                    <li class="attendees">13 attendees</li>
+                </ul>
+                <div class="eventButton">
+                    <a href="#">
+                        <img alt="like icon"
+                             src="img/site/like-icon.png">
+                    </a>
+                    <a href="#">
+                        <img alt="share-con"
+                             src="img/site/share-icon.png">
+                    </a>
+                </div>
+            </li>
 
-                <li class="eventBlock">
-                    <div class="eventImage">
-                        <a href="#">
-                            <img alt="deer patrol"
-                                 src="img/events/deer-patrol.jpeg">
-                        </a>
-                    </div>
-                    <ul class="eventInfo">
-                        <li class="eventTitle">Deer-patrol</li>
-                        <li class="eventLocation">Location: Trail C</li>
-                        <li class="eventTime">09/21/2021 10:00 AM</li>
-                        <li class="attendees">23 attendees</li>
-                    </ul>
-                    <div class="eventButton">
-                        <a href="#">
-                            <img alt="add icon"
-                                 src="img/events/add-event-button.png">
-                        </a>
-                        <a href="#">
-                            <img alt="share-con"
-                                 src="img/site/share-icon.png">
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </article>
-    </section>
+            <li class="eventBlock">
+                <div class="eventImage">
+                    <a href="#">
+                        <img alt="deer patrol"
+                             src="img/events/deer-patrol.jpeg">
+                    </a>
+                </div>
+                <ul class="eventInfo">
+                    <li class="eventTitle">Deer-patrol</li>
+                    <li class="eventLocation">Location: Trail C</li>
+                    <li class="eventTime">09/21/2021 10:00 AM</li>
+                    <li class="attendees">23 attendees</li>
+                </ul>
+                <div class="eventButton">
+                    <a href="#">
+                        <img alt="like icon"
+                             src="img/site/like-icon.png">
+                    </a>
+                    <a href="#">
+                        <img alt="share-con"
+                             src="img/site/share-icon.png">
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </main>
 
     <footer>
         <div id="leftFooter">
